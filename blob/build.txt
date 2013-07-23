@@ -1,0 +1,6 @@
+g++ -c _cvblob.C -D"__int64=long long"
+g++ -shared -Wl _cvblob.o -L/usr/lib -L/usr/local/lib -lopencv_core -lcvblob -lboost_python -L/usr/lib/python2.6/config -lpython2.6 -o _cvblob.so
+
+g++ -shared -Wl _cvblob.o -L/usr/lib -L/usr/local/lib -L/usr/include/opencv2/core -lcvblob -L/usr/include/boost/python -L/usr/lib/python2.6/config -lpython2.6 -o _cvblob.dll
+
+g++ -shared -Wl _cvblob.o -L/usr/lib -L/usr/local/lib -L/usr/include/opencv2/core -L/usr/include/cvBlob -o _cvblob.dll
